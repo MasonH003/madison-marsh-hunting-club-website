@@ -8,6 +8,7 @@ function App() {
       <BrowserRouter>
         <Routes>
           <Route index element = {<Home/>}/>
+          <Route path = "/Home" element = {<Home/>}/>
         </Routes>
       </BrowserRouter>
     </div>
@@ -15,28 +16,3 @@ function App() {
 }
 
 export default App;
-{/**
-
-import { useEffect, useState } from "react";
-import { supabase } from './Supabase';
-
-export default function App() {
-  const [countries, setCountries] = useState([]);
-
-    useEffect(() => {
-      getCountries();
-    }, []);
-
-    async function getCountries() {
-      const { data } = await supabase.from("countries").select();
-      setCountries(data);
-    }
-  return (
-    <ul>
-      {countries.map((country) => (
-        <li key={country.name}>{country.name}</li>
-      ))}
-    </ul>
-  )
-}
-*/}
