@@ -3,9 +3,9 @@ import { NavButton } from '../components';
 
 const Header = () => {
     return (
-        <header className = "flex flex-row items-center place-content-around pt-4 static">
+        <header className = "flex flex-row items-center place-content-around pt-4 pb-4 static bg-MMHCBrown">
             <a href = "/Home">
-                <div className = "flex flex-col font-semibold text-2xl">
+                <div className = "flex flex-col font-semibold text-2xl text-MMHCCream">
                     <h1>Madison Marsh</h1>
                     <h1>Hunting Club</h1>
                 </div>
