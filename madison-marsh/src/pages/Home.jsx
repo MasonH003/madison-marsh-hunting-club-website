@@ -5,6 +5,9 @@ function Home() {
     <home>
       <Header/>
       <Hero/>
+      <div>
+        
+      </div>
     </home>
   );
 }
