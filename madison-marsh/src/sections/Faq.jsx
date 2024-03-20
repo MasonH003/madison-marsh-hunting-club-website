@@ -1,0 +1,37 @@
+
+const Faq = () => {
+  return (
+    <div className = "bg-MMHCOlive pl-20 pr-20">
+      <h1 className = "flex justify-center p-4 text-2xl bg-MMHCOlive text-MMHCBrown font-semibold">Frequently Asked Questions</h1>
+        <div class="collapse bg-MMHCGreen text-MMHCCream collapse-arrow">
+          <input type="radio" name="my-accordion-1" checked="checked" /> 
+          <div class="collapse-title text-xl font-medium">
+            Click to open this one and close others
+          </div>
+          <div class="collapse-content"> 
+            <p>hello</p>
+          </div>
+        </div>
+        <div class="collapse bg-MMHCGreen text-MMHCCream collapse-arrow">
+          <input type="radio" name="my-accordion-1" /> 
+          <div class="collapse-title text-xl font-medium">
+            Click to open this one and close others
+          </div>
+          <div class="collapse-content"> 
+            <p>hello</p>
+          </div>
+        </div>
+        <div class="collapse bg-MMHCGreen text-MMHCCream collapse-arrow">
+          <input type="radio" name="my-accordion-1" /> 
+          <div class="collapse-title text-xl font-medium">
+            Click to open this one and close others
+          </div>
+          <div class="collapse-content"> 
+            <p>hello</p>
+          </div>
+        </div>
+    </div>
+  )
+}
+
+export default Faq
