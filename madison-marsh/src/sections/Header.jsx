@@ -15,23 +15,27 @@ const Header = () => {
                 <a href = "/Home">
                 <NavButton label = "Home"/>
                 </a>
-                <a className = "dropdown dropdown-hover" href = "">
+
+                <a className = "dropdown dropdown-hover" href = "/AboutUs">
                 <NavButton tabindex = "0" label = "About"/>
                     <ul tabindex="0" class="dropdown-content z-[1] menu p-2 shadow bg-MMHCCream text-MMHCGreen rounded-box w-52">
-                        <li><a>Item 1</a></li>
-                        <li><a>Item 2</a></li>
+                        <li><a href = "/AboutUs">About Us</a></li>
+                        <li><a href = "/ClubRules">Club Rules</a></li>
                     </ul>
                 </a>
-                <a className = "dropdown dropdown-hover" href = "">
+
+                <a className = "dropdown dropdown-hover" href = "/History">
                 <NavButton tabindex = "0" label = "History"/>
                     <ul tabindex="0" class="dropdown-content z-[1] menu p-2 shadow bg-MMHCCream text-MMHCGreen rounded-box w-52">
                         <li><a>Item 1</a></li>
                         <li><a>Item 2</a></li>
                     </ul>
                 </a>
+
                 <a href = "">
                 <NavButton label = "Forum"/>
                 </a>
+
                 <a href = "">
                 <NavButton label = "Account"/>
                 </a>

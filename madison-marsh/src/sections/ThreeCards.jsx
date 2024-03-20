@@ -1,4 +1,5 @@
 import { Card } from '../components';
+import { History } from '../pages';
 import sika from '../assets/images/sika.jpg';
 import group from '../assets/images/hunting-group.jpg';
 import dorcester from '../assets/images/dorcester.jpg';
