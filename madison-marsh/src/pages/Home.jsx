@@ -1,4 +1,4 @@
-import { Header, Hero, ThreeCards } from '../sections';
+import { Header, Hero, ThreeCards, Footer } from '../sections';
 
 function Home() {
   return (
@@ -9,6 +9,7 @@ function Home() {
         Scroll for more info
       </div>
       <ThreeCards/>
+      <Footer/>
     </home>
   );
 }
