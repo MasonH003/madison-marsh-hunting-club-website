@@ -1,14 +1,12 @@
 {/* import { Navbar } from 'flowbite-react'; */}
 import { NavButton } from '../components';
+import logo from '../assets/images/MMHC-Logo-Two.png';
 
 const Header = () => {
     return (
         <header className = "flex flex-row items-center place-content-around pt-4 pb-4 static bg-MMHCBrown">
-            <a href = "/Home">
-                <div className = "flex flex-col font-semibold text-2xl text-MMHCCream">
-                    <h1>Madison Marsh</h1>
-                    <h1>Hunting Club</h1>
-                </div>
+            <a className = "flex flex-row items-center" href = "/Home">
+                <img src={logo} alt="Logo" width="250" height="200"/>
             </a>
             <nav className = "flex flex-row justify-center items-center font-thin">
                 <a href = "/Home">
