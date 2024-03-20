@@ -3,11 +3,9 @@ import { NavButton } from '../components';
 import logo from '../assets/images/MMHC-Logo-Two.png';
 
 const Header = () => {
-    
-    
-    
+
     return (
-        <header className = "flex flex-row sticky top-0 z-50 items-center place-content-around pt-4 pb-4 bg-MMHCBrown">
+        <header className = "flex flex-row sticky top-0 z-50 items-center place-content-around pt-2 pb-2 bg-MMHCBrown">
             <a className = "flex flex-row items-center" href = "/Home">
                 <img src={logo} alt="Logo" width="250" height="200"/>
             </a>

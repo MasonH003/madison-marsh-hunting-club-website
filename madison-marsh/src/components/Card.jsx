@@ -1,7 +1,13 @@
 function Card(props) {
     return (
-      <div className="card w-96 bg-MMHCGreen text-MMHCCream shadow-xl transition transform hover:-translate-y-2 motion-reduce:transition-none motion-reduce:hover:transform-none"><a href = "/Home">
-        <figure><img src={props.imageUrl} alt={props.altText} /></figure>
+      <div className="card w-96 bg-MMHCGreen text-MMHCCream shadow-xl transition transform hover:-translate-y-2 motion-reduce:transition-none motion-reduce:hover:transform-none"><a href = {props.href}>
+        <figure>
+          <img
+            src={props.imageUrl}
+            alt={props.altText}
+            className = "w-full h-48 object-cover" 
+          />
+        </figure>
         <div className="card-body">
           <h2 className="card-title">{props.title}</h2>
           <p>{props.description}</p>
