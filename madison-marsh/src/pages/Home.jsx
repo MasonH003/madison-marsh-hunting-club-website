@@ -1,4 +1,4 @@
-import { Header, Hero, ThreeCards, Footer, Faq } from '../sections';
+import { Header, Hero, ThreeCards, Footer, Faq, News } from '../sections';
 
 function Home() {
   return (
@@ -8,7 +8,9 @@ function Home() {
       <div className = "text-xl font-thin text-MMHCCream bg-MMHCBrown flex flex-row justify-center p-4">
         Scroll for more info
       </div>
+      <div className = "bg-MMHCOlive text-MMHCCream text-4xl flex justify-center font-thin p-3">Welcome to the Marsh</div>
       <ThreeCards/>
+      <News/>
       <Faq/>
       <Footer/>
     </home>
