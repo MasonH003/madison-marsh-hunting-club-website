@@ -34,7 +34,7 @@ const Header = () => {
                 <NavButton label = "Forum"/>
                 </a>
 
-                <a href = "">
+                <a href = "/SigninSignup">
                 <NavButton label = "Account"/>
                 </a>
             </nav>
