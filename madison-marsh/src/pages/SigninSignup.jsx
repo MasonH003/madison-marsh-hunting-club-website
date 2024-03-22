@@ -28,7 +28,7 @@ function SigninSignup() {
 
             extend: false,
             className: {
-                button: "btn btn-primary bg-dashing-pink hover:bg-[#db5656] text-white border-dashing-pink hover:border-dashing-pink hover:text-[#c0c0c0]",
+                button: "btn btn-primary bg-[#BB2525] hover:bg-[#db5656] text-white border-MMHCGreen hover:border-dashing-pink hover:text-[#c0c0c0]",
                 container: "flex flex-col items-center gap-4 bg-cweam pb-2",
                 input: "bg-white rounded-md p-2 flex-row",
                 divider: "bg-cweam p-2",
