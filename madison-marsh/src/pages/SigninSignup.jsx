@@ -22,7 +22,7 @@ function SigninSignup() {
     return (
     <signinsignup>
       <Header/>
-      <div className = "text-2xl font-thin text-MMHCCream bg-MMHCBrown flex flex-row justify-center">
+      <div className = "text-2xl font-thin text-MMHCCream bg-MMHCBlack flex flex-row justify-center">
         <div>
         <Auth supabaseClient={supabase} providers={['google']} appearance={{
  
