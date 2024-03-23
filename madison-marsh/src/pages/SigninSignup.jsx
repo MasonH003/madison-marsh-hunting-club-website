@@ -25,15 +25,15 @@ function SigninSignup() {
       <div className = "text-2xl font-thin text-MMHCCream bg-MMHCBrown flex flex-row justify-center">
         <div>
         <Auth supabaseClient={supabase} providers={['google']} appearance={{
-
+ 
             extend: false,
             className: {
-                button: "btn btn-primary bg-[#BB2525] hover:bg-[#db5656] text-white border-MMHCGreen hover:border-dashing-pink hover:text-[#c0c0c0]",
-                container: "flex flex-col items-center gap-4 bg-cweam pb-2",
-                input: "bg-white rounded-md p-2 flex-row",
-                divider: "bg-cweam p-2",
-                label: "text-navy-sucks pr-4",
-                anchor: "text-navy-sucks hover:text-[#5e7aeb]"
+                button: "btn btn-primary bg-MMHCRed hover:bg-MMHCLightRed text-white border-MMHCGreen hover:text-[#c0c0c0]",
+                container: "flex flex-col items-center pt-2 gap-4 pb-2",
+                input: "rounded-md p-2 flex-row",
+                divider: "p-2",
+                label: "pr-4",
+                anchor: "hover:text-MMHCLightRed"
             }
 }}/>
       </div>
