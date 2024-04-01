@@ -21,22 +21,26 @@ Download:
 https://nodejs.org/en/download/
 
 - After downloading the above, check to see if node is installed using commands in cmd terminal and then in the terminal of the project after copying this repo from github into vscode:
+```
 node -v
 npm -v
-
+```
 - Download dependencies by copying and pasting each of these commmands in the terminal: (IF THERE IS AN OPTION TO DOWNLOAD ALL NECESSARY DEPENDENCIES (Y) DO THIS!!) if not:
+```
 npm i -D daisyui@latest
 npm install flowbite flowbite-react
 npm install @supabase/supabase-js @supabase/auth-ui-react @supabase/auth-ui-shared
 npm i react-router-dom
 npm install -D tailwindcss postcss autoprefixer
+```
 
 ### How to Run
 
 - Run command: make sure you are in the right directory
+```
 cd madison-marsh
 npm run dev
-
+```
 - Click the localhost link that pops up in the terminal and if everything ran correctly the website should pop up in your default browser.
 
 ### How to Test
