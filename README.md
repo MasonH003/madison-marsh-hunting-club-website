@@ -46,7 +46,7 @@ npm run dev
 ### How to Test
 
 - Install dependencies:
-npm i --save-dev jest
+npm install --save-dev jest babel-jest @babel/preset-env @babel/preset-react react-test-renderer
 
 ```
 npm run test
