@@ -44,3 +44,10 @@ npm run dev
 - Click the localhost link that pops up in the terminal and if everything ran correctly the website should pop up in your default browser.
 
 ### How to Test
+
+- Install dependencies:
+npm i --save-dev jest
+
+```
+npm run test
+```
