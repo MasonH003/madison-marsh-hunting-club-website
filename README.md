@@ -51,3 +51,7 @@ npm i --save-dev jest
 ```
 npm run test
 ```
+- To see a coverage report, go into package.json and underneath "scripts", change "test" to:
+```
+"test": "jest --coverage"
+```
