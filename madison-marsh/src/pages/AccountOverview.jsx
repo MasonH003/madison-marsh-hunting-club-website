@@ -50,6 +50,7 @@ function AccountOverview() {
             .eq('id', 1)
       }
 
+      const [visible, setVisible ] = useState(false);
   
     return (
     <accoverview>
@@ -57,9 +58,20 @@ function AccountOverview() {
       <div className = "text-4xl font-thin text-MMHCCream bg-MMHCBlack flex flex-row justify-center p-4">
         Account Overview
       </div>
-      <div className = "bg-MMHCBlack text-MMHCCream">
+      <div className = "bg-MMHCBlack text-MMHCCream flex flex-col items-center">
 
         <RedButton onClick = {signOutUser} label = {'Logout'}/>
+        <RedButton onClick = {()=> setVisible(!visible)} label = {'Change Username'}/>
+        {visible ? 
+            <div className={"visible"}>
+              <form action={updateUsername} class="p-2"> New Username:
+                <input name="query" class="p-2 rounded text-MMHCBlack" />
+                <button type="submit" class="bg-MMHCRed border-MMHCBlack rounded p-2">Submit</button>
+              </form>
+            </div>
+            :
+            <div className={"invisible"}></div>
+          }
       </div>
 
 

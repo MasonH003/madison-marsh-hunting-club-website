@@ -44,3 +44,14 @@ npm run dev
 - Click the localhost link that pops up in the terminal and if everything ran correctly the website should pop up in your default browser.
 
 ### How to Test
+
+- Install dependencies:
+npm install --save-dev jest babel-jest @babel/preset-env @babel/preset-react react-test-renderer
+
+```
+npm run test
+```
+- To see a coverage report, go into package.json and underneath "scripts", change "test" to:
+```
+"test": "jest --coverage"
+```
