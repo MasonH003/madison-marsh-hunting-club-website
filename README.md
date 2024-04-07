@@ -46,12 +46,11 @@ npm run dev
 ### How to Test
 
 - Install dependencies:
-npm install --save-dev jest babel-jest @babel/preset-env @babel/preset-react react-test-renderer
+npm install cypress --save-dev
 
 ```
-npm run test
+npx cypress open
 ```
-- To see a coverage report, go into package.json and underneath "scripts", change "test" to:
 ```
-"test": "jest --coverage"
+
 ```
