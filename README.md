@@ -44,4 +44,21 @@ npm run dev
 - Click the localhost link that pops up in the terminal and if everything ran correctly the website should pop up in your default browser.
 
 ### How to Test
+```
+npm i -D vitest
 
+// download vscode Vitest snippets extension (dein software)
+
+// click (y) to download vitest ui if prompted
+
+npm i -D @testing-library/react@14.2.0
+npm i -D jsdom@24.0.0
+npm i -D @testing-library/jest-dom
+
+// COMMANDS:
+
+npm run test
+npm run test:ui
+
+
+```
