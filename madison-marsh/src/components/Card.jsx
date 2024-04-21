@@ -1,6 +1,6 @@
 function Card(props) {
     return (
-      <div className="card w-96 bg-MMHCGreen text-MMHCCream shadow-xl transition transform hover:-translate-y-2 motion-reduce:transition-none motion-reduce:hover:transform-none"><a href = {props.href}>
+      <div className="bg-secondary card w-96 bg-MMHCGreen text-MMHCCream shadow-xl transition transform hover:-translate-y-2 motion-reduce:transition-none motion-reduce:hover:transform-none"><a href = {props.href}>
         <figure>
           <img
             src={props.imageUrl}

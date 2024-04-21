@@ -8,7 +8,7 @@ function Home() {
       <div className = "text-xl font-thin text-MMHCCream bg-MMHCBrown flex flex-row justify-center p-4">
         Scroll for more info
       </div>
-      <div className = "bg-MMHCOlive text-MMHCCream text-4xl flex justify-center font-thin p-3">Welcome to the Marsh</div>
+      <div className = "bg-accent text-6xl flex justify-center font-thin p-3">Welcome to the Marsh</div>
       <ThreeCards/>
       <News/>
       <Faq/>

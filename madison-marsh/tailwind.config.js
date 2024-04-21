@@ -2,21 +2,41 @@
 export default {
   content: [
     "./index.html",
-    "./src/**/*.{js,ts,jsx,tsx}",
-    'node_modules/flowbite-react/lib/esm/**/*.js'
+    "./src/**/*.{js,ts,jsx,tsx}"
   ],
-  theme: {
+  themes: {
     extend: {
-      colors: {
-        'MMHCBrown' : '#362706',
-        'MMHCGreen' : '#464E2E',
-        'MMHCOlive' : '#ACB992',
-        'MMHCCream' : '#E9E5D6',
-        'MMHCRed' : '#BB2525',
-        'MMHCLightRed' : '#E0392D',
-        'MMHCBlack' : '#212121'
+      color: {
+        'MMHCBrown' : "#362706",
+        'MMHCGreen' : "$464E2E"
       }
     },
+  },
+  daisyui: {
+    themes: [
+      {
+        mytheme: {
+          "primary": "#212121",
+          
+          "secondary": "#464E2E",
+                   
+          "accent": "#ACB992",
+                   
+          "neutral": "#E9E5D6",
+                   
+          "base-100": "#362706",
+                   
+          "info": "#00ffff",
+                   
+          "success": "#00ff00",
+                   
+          "warning": "facc15",
+                   
+          "error": "#E0392D",
+         
+        },
+      },
+    ],
   },
   plugins: [
     require("daisyui")

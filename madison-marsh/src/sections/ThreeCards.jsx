@@ -6,7 +6,7 @@ import dorcester from '../assets/images/dorcester.jpg';
 const ThreeCards = () => {
   return (
     <threecards>
-        <div className = "bg-MMHCOlive p-5 flex flex-row place-content-around">
+        <div className = "bg-accent p-5 flex flex-row place-content-around">
             <Card
                 imageUrl={group}
                 altText="Club info"
