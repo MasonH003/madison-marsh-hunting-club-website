@@ -51,8 +51,7 @@ const News = () => {
 
   return (
     <news>
-      <h3 className = "bg-accent text-neutral text-4xl flex flex-row justify-center pb-2 pt-2">Current News</h3>
-      {/* Open the modal using document.getElementById('ID').showModal() method */}
+      <h3 className = "bg-base-100 text-neutral text-4xl flex flex-row justify-center pb-2 pt-2">Current News</h3>
       <button className="btn btn-info" onClick={()=>document.getElementById('my_modal_1').showModal()}>Add News</button>
       <dialog id="my_modal_1" className="modal">
         <div className="modal-box">
@@ -75,14 +74,13 @@ const News = () => {
           </div> 
           <div className="modal-action">
             <form method="dialog">
-              {/* if there is a button in form, it will close the modal */}
               <button className="btn btn-error">Close</button>
             </form>
           </div>
         </div>
       </dialog>
       
-      <div className = "flex flex-row justify-center flex-wrap space-x-2 bg-accent pb-4 pt-4">
+      <div className = "flex flex-row justify-center flex-wrap space-x-4 space-y-4 bg-accent pb-4 pt-4">
         {news.map((news) => (
           <NewsCard news = {news}/>
         ))}

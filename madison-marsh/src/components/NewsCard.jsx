@@ -53,9 +53,10 @@ function NewsCard(props) {
           <div className="card-actions justify-end">
           </div>
         </div>
-
-        <button className="btn btn-info" onClick = {() => setEditing(true)}>Edit News</button>
-        <button className="btn btn-error" onClick = {() => deleteNews()}>Delete News</button>
+        <div className = "flex flex-row justify-center space-x-2 pb-2">
+          <button className="btn btn-error" onClick = {() => deleteNews()}>Delete News</button>
+          <button className="btn btn-info" onClick = {() => setEditing(true)}>Edit News</button>
+        </div>
         </>
         :
         <>
