@@ -1,16 +1,46 @@
 import { useState } from 'react';
+import { supabase } from '../Supabase';
 
 function NewsCard(props) {
 
     const news = props.news;
-
     const [ editing, setEditing ] = useState(false);
+    const [ title, setTitle ] = useState(news.title);
+    const [ description, setDescription ] = useState(news.description);
+    const [ date, setDate ] = useState(news.date);
 
-    const [ name, setTitle ] = useState("");
-    const [ description, setDescription ] = useState("");
-    const [ date, setDate ] = useState("");
 
-    
+    // UPDATES THE NEWS CARD:
+    async function updateNews() {
+        try {
+            const { data, error } = await supabase
+              .from("newsitem")
+              .update({
+                title: title,
+                description: description,
+                date: date
+              })
+              .eq("id", news.id)
+            if(error) throw error;
+            window.location.reload();
+          } catch (error) {
+            alert(error.message);
+        }
+    }
+
+    // DELETES THE NEWS CARD:
+    async function deleteNews() {
+        try {
+            const { data, error } = await supabase
+              .from("newsitem")
+              .delete()
+              .eq("id", news.id)
+            if(error) throw error;
+            window.location.reload();
+          } catch (error) {
+            alert(error.message);
+        }
+    }
 
     return (
       <div className="card w-96 bg-base-100 shadow-xl bg-secondary">
@@ -25,7 +55,7 @@ function NewsCard(props) {
         </div>
 
         <button className="btn btn-info" onClick = {() => setEditing(true)}>Edit News</button>
-        <button className="btn btn-error">Delete News</button>
+        <button className="btn btn-error" onClick = {() => deleteNews()}>Delete News</button>
         </>
         :
         <>
@@ -44,7 +74,7 @@ function NewsCard(props) {
             onChange = {(e) => setDescription(e.target.value)}
             ></textarea>
             <br></br>
-            <button className="btn btn-info">Accept Changes</button>
+            <button className="btn btn-info" onClick = {() => updateNews()}>Accept Changes</button>
           </div> 
         </>
         }

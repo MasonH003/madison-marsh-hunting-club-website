@@ -15,6 +15,7 @@ const News = () => {
     getNews();
   }, [])
 
+  // FETCHES NEWS FROM SUPABASE:
   async function getNews() {
     try {
       const { data, error } = await supabase
@@ -30,6 +31,7 @@ const News = () => {
     }
   }
 
+  // INSERTS BRAND NEW EVENT INTO SUPABASE:
   async function createNews() {
     try {
       const { data, error } = await supabase
