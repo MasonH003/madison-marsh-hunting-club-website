@@ -11,7 +11,7 @@ const Faq = () => {
             <p>Click the "Account" tab and create an account.</p>
           </div>
         </div>
-        <div class="collapse bg-secondary text-MMHCCream collapse-arrow">
+        <div class="collapse bg-secondary text-MMHCCream hover:collapse-arrow">
           <input type="radio" name="my-accordion-1" /> 
           <div class="collapse-title text-xl font-medium">
             What do I do in case of an emergency?
@@ -20,7 +20,7 @@ const Faq = () => {
             <p>Click the red "Emergency" button on the top of the webpage</p>
           </div>
         </div>
-        <div class="collapse bg-secondary text-MMHCCream collapse-arrow">
+        <div class="collapse bg-secondary text-MMHCCream hover:collapse-arrow">
           <input type="radio" name="my-accordion-1" /> 
           <div class="collapse-title text-xl font-medium">
             Am I allowed to hunt on the property?
