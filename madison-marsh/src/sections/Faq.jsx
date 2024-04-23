@@ -1,35 +1,32 @@
 
 const Faq = () => {
   return (
-    <div className = "bg-MMHCOlive pl-20 pr-20 pb-16">
-      <h1 className = "flex justify-center p-4 text-4xl bg-MMHCOlive text-MMHCBrown">Frequently Asked Questions</h1>
-        <div class="collapse bg-MMHCGreen text-MMHCCream collapse-arrow">
+    <div className = "bg-accent pl-20 pr-20 pb-4 pt-4">
+        <div class="collapse bg-secondary text-MMHCCream hover:collapse-arrow">
           <input type="radio" name="my-accordion-1" checked="checked" /> 
           <div class="collapse-title text-xl font-medium">
-            Click to open this one and close others
+            How do I become a member?
           </div>
           <div class="collapse-content"> 
-            <p>hello</p>
+            <p>Click the "Account" tab and create an account.</p>
           </div>
         </div>
-        <br></br>
-        <div class="collapse bg-MMHCGreen text-MMHCCream collapse-arrow">
+        <div class="collapse bg-secondary text-MMHCCream collapse-arrow">
           <input type="radio" name="my-accordion-1" /> 
           <div class="collapse-title text-xl font-medium">
-            Click to open this one and close others
+            What do I do in case of an emergency?
           </div>
           <div class="collapse-content"> 
-            <p>hello</p>
+            <p>Click the red "Emergency" button on the top of the webpage</p>
           </div>
         </div>
-        <br></br>
-        <div class="collapse bg-MMHCGreen text-MMHCCream collapse-arrow">
+        <div class="collapse bg-secondary text-MMHCCream collapse-arrow">
           <input type="radio" name="my-accordion-1" /> 
           <div class="collapse-title text-xl font-medium">
-            Click to open this one and close others
+            Am I allowed to hunt on the property?
           </div>
           <div class="collapse-content"> 
-            <p>hello</p>
+            <p>This club is currently invite only.</p>
           </div>
         </div>
     </div>

@@ -8,7 +8,6 @@ const News = () => {
   const [ title, setTitle ] = useState("");
   const [ description, setDescription ] = useState("");
   const [ date, setDate ] = useState("");
-
   const [ news, setNews] = useState([]);
 
   useEffect(() => {
