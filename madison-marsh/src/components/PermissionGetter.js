@@ -1,4 +1,4 @@
-/*import React, { useEffect, useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import { Auth } from '@supabase/auth-ui-react';
 import { supabase } from '../Supabase';
 
@@ -37,4 +37,4 @@ function getPerms() {
 }
 
 
-export default PermissionGetter;*/
+export default PermissionGetter;
