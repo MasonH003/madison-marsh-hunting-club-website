@@ -28,7 +28,7 @@ function SigninSignup() {
  
             extend: false,
             className: {
-                button: "btn btn-primary bg-MMHCRed hover:bg-MMHCLightRed text-white border-MMHCGreen hover:text-[#c0c0c0]",
+                button: "btn btn-error bg-MMHCRed hover:bg-MMHCLightRed text-white border-MMHCGreen hover:text-[#c0c0c0]",
                 container: "flex flex-col items-center pt-2 gap-4 pb-2",
                 input: "rounded-md p-2 flex-row",
                 divider: "p-2",
