@@ -1,9 +1,16 @@
 {/* import { Navbar } from 'flowbite-react'; */}
 import { NavButton } from '../components';
 import logo from '../assets/images/MMHC-Logo-Two.png';
+import { getPerms } from '../components/PermissionGetter.js';
+import React, {useState, useEffect } from 'react';
 
 const Header = () => {
+    const [userId, setUserId] = useState(-1);
+    const [perms, setPerms] = useState(-1);
+    getPerms( setUserId, setPerms );
 
+
+    //console.log( "perms is: " + perms );
     return (
         <header className = "bg-primary shadow-lg flex flex-row sticky top-0 z-50 items-center place-content-around pt-2 pb-2">
             <a className = "flex flex-row items-center" href = "/Home">
@@ -39,11 +46,24 @@ const Header = () => {
                 </a>
             </nav>
             <div className = "flex flex-col">
+                { perms >= 3 ? 
+                <>
                 <button className ="btn btn-outline btn-info">Admin View</button>
+                </>
+                : 
+                <div className = "nothing" ></div>
+                }
+
+                { perms >= 2 ? 
+                <>
                 <a href = "/MemberPage">
                     <button className ="btn btn-outline btn-warning">Members</button>
                 </a>
                 <button className ="btn btn-outline btn-error">Emergency</button>
+                </>
+                :
+                <div className = "nothin"> </div> 
+                }
             </div>
         </header>
     )

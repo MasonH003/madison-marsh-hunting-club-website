@@ -2,6 +2,7 @@
 import { useState, useEffect } from 'react';
 import { supabase } from '../Supabase';
 import { NewsCard } from '../components';
+import {getPerms } from '../components/PermissionGetter.js';
 
 const News = () => {
 
@@ -9,6 +10,10 @@ const News = () => {
   const [ description, setDescription ] = useState("");
   const [ date, setDate ] = useState("");
   const [ news, setNews] = useState([]);
+
+  const [userId, setUserId] = useState(-1);
+  const [perms, setPerms] = useState(-1);
+  getPerms( setUserId, setPerms );
 
   useEffect(() => {
     getNews();
@@ -51,7 +56,14 @@ const News = () => {
   return (
     <news>
       <h3 className = "bg-base-100 text-neutral text-4xl flex flex-row justify-center pb-2 pt-2">Current News</h3>
+      { perms >= 3 ?
+      <>
       <button className="btn btn-info" onClick={()=>document.getElementById('my_modal_1').showModal()}>Add News</button>
+      </>
+      :
+      <></>
+      }
+      
       <dialog id="my_modal_1" className="modal">
         <div className="modal-box">
           <h3 className="font-bold text-lg">Add News Event</h3>

@@ -1,7 +1,14 @@
 import { useState } from 'react';
 import { supabase } from '../Supabase';
+import { getPerms } from '../components/PermissionGetter.js';
+import React, { useEffect } from 'react';
+
 
 function NewsCard(props) {
+
+  const [userId, setUserId] = useState(-1);
+  const [perms, setPerms] = useState(-1);
+  getPerms( setUserId, setPerms );
 
     const news = props.news;
     const [ editing, setEditing ] = useState(false);
@@ -54,8 +61,14 @@ function NewsCard(props) {
           </div>
         </div>
         <div className = "flex flex-row justify-center space-x-2 pb-2">
+          { perms >= 3 ? 
+          <>
           <button className="btn btn-error" onClick = {() => deleteNews()}>Delete News</button>
           <button className="btn btn-info" onClick = {() => setEditing(true)}>Edit News</button>
+          </>
+          :
+          <></>
+          }
         </div>
         </>
         :

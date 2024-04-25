@@ -2,39 +2,49 @@ import React, { useEffect, useState } from 'react';
 import { Auth } from '@supabase/auth-ui-react';
 import { supabase } from '../Supabase';
 
-function getPerms() {
-    const [userId, setUserId] = useState(0);
-    const fetchUserData = async () => {
+export async function getPerms( setUserId, setPerms ) {
+
+    const [usId, setUsId] = useState(-1);
+    const fetchUser = async () => {
         try {
             const { data: { user } } = await supabase.auth.getUser();
             setUserId( user.id );
-
+            //console.log("user is " + user + "; userid is " + user.id);
+            setUsId(user.id);
+            
+        } catch (error) {
+            console.error("Error fetching user:", error.message);
+            return -1;
+        }
+    }
+    const fetchUserPerms = async () => {
+        try {
             const { data, error } = await supabase
               .from('userdata')
               .select()
-              .eq('id', userId)
+              .eq('id', usId)
               .single()
-            perms = data.permission;
-            return perms;
+            setPerms(data.permission);
         } catch (error) {
             console.error("Error fetching user data:", error.message);
             return -1;
         }
-        try {
-          const { data, error } = await supabase
-              .from('userdata')
-              .select()
-              .eq('id', userId)
-              .single()
-          //console.log("test");
-          //console.log(data);
-          console.log("username is " + data.username );
-
-        } catch (error) {
-          
-        }
     }
+
+
+    fetchUser()
+        .then( function () {
+            fetchUserPerms();
+        }
+    )
+    
+    /*useEffect(() => {
+        if (usId) {
+            fetchUserPerms();
+        }
+    }, [usId]);
+        
+      useEffect(() => {  //using "useEffect" stops the component from continuously calling this method and rerendering forever
+        fetchUser();
+    }, []);*/
 }
-
-
-export default PermissionGetter;
