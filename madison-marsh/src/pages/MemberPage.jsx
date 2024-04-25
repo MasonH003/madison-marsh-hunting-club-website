@@ -8,6 +8,7 @@ const MemberPage = () => {
   return (
     <div className = "">
         <Header/>
+            <h1 className = "flex flex-row justify-center text-4xl p-4">Welcome Member</h1>
             <div className = "flex flex-row space-x-6 justify-center pt-6 pb-6 bg-accent">
                 <Card
                     imageUrl={birds}
@@ -23,10 +24,17 @@ const MemberPage = () => {
                     description="Click here to communicate with other club members"
                     href = "/ClubRules"
                 />
+                <Card
+                    imageUrl={center}
+                    altText="Reserve Feeders & Stands"
+                    title="Reserve Feeders & Stands"
+                    description="Click here to reserve feeders and stands on the property"
+                    href = "/ClubRules"
+                />
             </div>
         <Footer/>
     </div>
   )
 }
 
-export default MemberPage
+export default MemberPage;
