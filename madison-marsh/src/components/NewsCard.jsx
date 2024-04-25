@@ -61,7 +61,7 @@ function NewsCard(props) {
         :
         <>
 
-        <button className="btn btn-info" onClick = {() => setEditing(false)}>Unedit</button>
+        <button className="btn btn-error" onClick = {() => setEditing(false)}>Cancel</button>
         <div className = "flex flex-col">
             <input defaultValue = {news.title} id = "title" type="text" placeholder="Title" class="text-primary bg-input w-full max-w-xs p-1 rounded-md" 
             onChange = {(e) => setTitle(e.target.value)}
