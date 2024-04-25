@@ -59,7 +59,9 @@ const Header = () => {
                 <a href = "/MemberPage">
                     <button className ="btn btn-outline btn-warning">Members</button>
                 </a>
+                <a href = "/EmergencyContacts">
                 <button className ="btn btn-outline btn-error">Emergency</button>
+                </a>
                 </>
                 :
                 <div className = "nothin"> </div> 

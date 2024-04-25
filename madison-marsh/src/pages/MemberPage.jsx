@@ -5,6 +5,7 @@ import center from '../assets/images/center.jpg';
 
 const MemberPage = () => {
 
+    
   return (
     <div className = "">
         <Header/>

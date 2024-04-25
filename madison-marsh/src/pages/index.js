@@ -5,6 +5,7 @@ import AboutUs from './AboutUs';
 import SigninSignup from './SigninSignup';
 import AccountOverview from './AccountOverview';
 import MemberPage from './MemberPage';
+import EmergencyContacts from './EmergencyContacts';
 
 export {
     Home,
@@ -13,5 +14,6 @@ export {
     AboutUs,
     SigninSignup,
     AccountOverview,
-    MemberPage
+    MemberPage,
+    EmergencyContacts
 }

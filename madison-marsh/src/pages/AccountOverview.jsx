@@ -41,7 +41,7 @@ function AccountOverview() {
         }
       }
   
-      // Incomplete
+      
       const updateUsername = async() => {
         console.log(newUsername);
         if( newUsername === '' ) {

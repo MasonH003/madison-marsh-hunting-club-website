@@ -8,7 +8,7 @@ export async function getPerms( setUserId, setPerms ) {
     const fetchUser = async () => {
         try {
             const { data: { user } } = await supabase.auth.getUser();
-            setUserId( user.id );
+            //setUserId( user.id );
             //console.log("user is " + user + "; userid is " + user.id);
             setUsId(user.id);
             
