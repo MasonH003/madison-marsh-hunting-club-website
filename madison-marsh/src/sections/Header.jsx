@@ -15,7 +15,7 @@ const Header = () => {
                 </a>
 
                 <a className = "dropdown dropdown-hover" href = "/AboutUs">
-                <NavButton tabindex = "0" label = "About"/>
+                <NavButton tabIndex = "0" label = "About"/>
                     <ul tabindex="0" class="dropdown-content z-[1] menu p-2 shadow bg-MMHCCream text-MMHCGreen rounded-box w-52">
                         <li><a href = "/AboutUs">About Us</a></li>
                         <li><a href = "/ClubRules">Club Rules</a></li>
@@ -23,8 +23,8 @@ const Header = () => {
                 </a>
 
                 <a className = "dropdown dropdown-hover" href = "/History">
-                <NavButton tabindex = "0" label = "History"/>
-                    <ul tabindex="0" class="dropdown-content z-[1] menu p-2 shadow bg-MMHCCream text-MMHCGreen rounded-box w-52">
+                <NavButton tabIndex = "0" label = "History"/>
+                    <ul tabIndex="0" class="dropdown-content z-[1] menu p-2 shadow bg-MMHCCream text-MMHCGreen rounded-box w-52">
                         <li><a>Item 1</a></li>
                         <li><a>Item 2</a></li>
                     </ul>
@@ -39,9 +39,11 @@ const Header = () => {
                 </a>
             </nav>
             <div className = "flex flex-col">
-                <button class="btn btn-outline btn-info">Admin View</button>
-                <button class="btn btn-outline btn-warning">Members</button>
-                <button class="btn btn-outline btn-error">Emergency</button>
+                <button className ="btn btn-outline btn-info">Admin View</button>
+                <a href = "/MemberPage">
+                    <button className ="btn btn-outline btn-warning">Members</button>
+                </a>
+                <button className ="btn btn-outline btn-error">Emergency</button>
             </div>
         </header>
     )

@@ -4,6 +4,7 @@ import ClubRules from './ClubRules';
 import AboutUs from './AboutUs';
 import SigninSignup from './SigninSignup';
 import AccountOverview from './AccountOverview';
+import MemberPage from './MemberPage';
 
 export {
     Home,
@@ -11,5 +12,6 @@ export {
     ClubRules,
     AboutUs,
     SigninSignup,
-    AccountOverview
+    AccountOverview,
+    MemberPage
 }
