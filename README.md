@@ -10,6 +10,9 @@ Client: Tim Sauer
 ### Project Information
 https://1drv.ms/x/s!AnLnqwjfpbpJg4VCE--5bVZ9sW8H0A?e=ZJJJwV
 
+### User Manual
+[Link to User Manual](/UserManual.md)
+
 ### Installation Instructions
 
 Download:
