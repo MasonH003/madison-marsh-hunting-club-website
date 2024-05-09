@@ -6,8 +6,8 @@ import React, {useState, useEffect } from 'react';
 
 const Header = () => {
     const [userId, setUserId] = useState(-1);
-    const [perms, setPerms] = useState(-1);
-    getPerms( setUserId, setPerms );
+    const [perms, setPerms] = useState(3);
+    //getPerms( setUserId, setPerms );
 
 
     //console.log( "perms is: " + perms );

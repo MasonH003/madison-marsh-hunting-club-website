@@ -1,6 +1,10 @@
 import { Header, Hero, ThreeCards, Footer, Faq, News } from '../sections';
+import { getPerms } from '../components/PermissionGetter.js';
+import React, { useEffect, useState } from 'react';
 
 function Home() {
+  
+
   return (
     <home>
       <Header/>

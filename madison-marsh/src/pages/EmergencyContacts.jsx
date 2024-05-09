@@ -10,21 +10,24 @@ import { supabase } from '../Supabase.js';
 function EmergencyContacts() {
     const [userId, setUserId] = useState(-1);
     const [perms, setPerms] = useState(-1);
+    const [memberNames, setMemberNames ] = useState([]);
+    const [memberNumbers, setMemberNumbers ] = useState([]);
+
     getPerms( setUserId, setPerms );
     const navigate = useNavigate();
 
     const [emergencyNameDisplay, setEmergencyNameDisplay] = useState("");
-    const [emergencyNumberDisplay, setEmergencyNumberDisplay] = useState("");
+    const [emergencyNumberDisplay, setEmergencyNumberDisplay] = useState("911");
 
     const [emergencyName, setEmergencyName] = useState("");
-    const [emergencyNumber, setEmergencyNumber] = useState("911");
+    const [emergencyNumber, setEmergencyNumber] = useState("");
 
 
     const fetchUserData = async () => {
         try {
             const { data: { user } } = await supabase.auth.getUser();
             setUserId( user.id );
-            console.log("id is " + userId);
+            
 
             
         } catch (error) {
@@ -54,13 +57,27 @@ function EmergencyContacts() {
         }
       }
 
+      /*const seeEmergencyContacts = async () => {
+        try {
+          const {data, error } = await supabase 
+            .from('userdata')
+            .select()
+            .eq('permission', 2)
+          
+          
+            
+        } catch (error) {
+          console.log("Error fetching all member emergency contacts: " + error );
+        }
+      }*/
+
     const updateEmergencyContact = async() => {
-        
+        event.preventDefault();
         if( emergencyName === '' ) {
           alert("Invalid contact name: cannot have an empty name");
           return;
         } else if ( emergencyNumber.length != 10 || !/^\d+$/.test(emergencyNumber) ) {
-          alert("Invalid number: emergency contant number must be 10 digits long and contain only numbers.");
+          alert("Invalid number: emergency contact number must be 10 digits long and contain only numbers.");
           return;
         }
         console.log("name is " + emergencyName );
@@ -75,20 +92,23 @@ function EmergencyContacts() {
             .update({ emergency_contact_number: emergencyNumber })
             .eq('id', userId)
         console.log("succ?")
-            
+        
+        setEmergencyNameDisplay( emergencyName );
+        setEmergencyNumberDisplay( emergencyNumber );
     
       }
 
 
 
       useEffect(() => {
-        if (userId) {
-            fetchEmergencyContact();
-        }
+        console.log("id is " + userId );
+        fetchEmergencyContact();
+        
     }, [userId]);
         
       useEffect(() => {  //using "useEffect" stops the component from continuously calling this method and rerendering forever
         fetchUserData();
+        //seeEmergencyContacts();
     }, []);
 
     return (
@@ -96,17 +116,21 @@ function EmergencyContacts() {
         { perms >= 2 ? 
         <div> 
         <Header/>
-        
-        <form class="text-3xl p-2"> Change Emergency Contact Info 
-                  <input name="query" class="p-2 rounded text-MMHCBlack text-sm" placeholder = "Contact's Name" onChange = {(e) => setEmergencyName(e.target.value)}/>
-                  <input name="query" class="p-2 rounded text-MMHCBlack text-sm" placeholder = "Contact's Number" onChange = {(e) => setEmergencyNumber(e.target.value)}/>
+        <div className = "text-3xl justify-left flex pb-4 pl-2">
+        <p>Emergency Contact Name: {emergencyNameDisplay}</p>
+        </div>
+        <div className = "text-3xl justify-left flex pb-4 pl-2">
+        <p className = "pr-2">Emergency Contact Number: {emergencyNumberDisplay}</p> </div>
+        <form class="text-3xl p-2"> Change Emergency Contact Info:  
+                  <input id="name" name="query" class="p-2 rounded text-MMHCBlack text-sm" placeholder = "Contact's Name" onChange = {(e) => setEmergencyName(e.target.value)}/>
+                  <input id="number" name="query" class="p-2 rounded text-MMHCBlack text-sm" placeholder = "Contact's Number" onChange = {(e) => setEmergencyNumber(e.target.value)}/>
                   <button onClick = {updateEmergencyContact} class="btn btn-error rounded p-2">Submit</button>
                 </form>
 
         <Footer/>
         </div>
         :
-        <></>
+        <>{/*navigate('/Home')*/}</>
         }
         </>
     )
